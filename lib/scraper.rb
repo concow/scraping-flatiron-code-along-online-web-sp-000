@@ -14,7 +14,7 @@ class Scraper
   end
   #operates on the collection of course offering Nokogiri XML elements that was returned by the .get_courses method
   def make_courses
-    self.get_courses.each do |post|
+    self.get_courses.each do |post|                   #iterate over the collection
       course = Course.new                             #new course instance
       course.title = post.css("h2").text              #The title of an individual course offering
       course.schedule = post.css(".date").text        #The schedule of an individual course offering
