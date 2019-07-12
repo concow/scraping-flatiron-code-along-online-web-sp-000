@@ -10,9 +10,9 @@ class Scraper
   end
   #operates on HTML page (return value of get_page) then returns the collection of Nokogiri XML elements that describe each course
   def get_courses
-    self.get_page.css(".post")                     
+    self.get_page.css(".post")
   end
-
+  #operates on the collection of course offering Nokogiri XML elements that was returned by the .get_courses method
   def make_courses
     self.get_courses.each do |post|
       course = Course.new                             #new course instance
