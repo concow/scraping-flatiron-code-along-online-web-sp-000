@@ -10,15 +10,15 @@ class Scraper
   end
 
   def get_courses
-    self.get_page.css(".post")
+    self.get_page.css(".post")                      #The collection of course offerings:
   end
 
   def make_courses
     self.get_courses.each do |post|
       course = Course.new                             #new course instance
-      course.title = post.css("h2").text
-      course.schedule = post.css(".date").text
-      course.description = post.css("p").text         #The description of an individual course offering:
+      course.title = post.css("h2").text              #The title of an individual course offering
+      course.schedule = post.css(".date").text        #The schedule of an individual course offering
+      course.description = post.css("p").text         #The description of an individual course offering
     end
   end
 
