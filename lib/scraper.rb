@@ -1,6 +1,6 @@
 require 'nokogiri'
 require 'open-uri'
-
+# requiring our Course class file so that our Scraper can make new courses and give them attributes scraped from the web page.
 require_relative './course.rb'
 
 class Scraper
