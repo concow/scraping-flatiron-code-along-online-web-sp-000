@@ -35,4 +35,4 @@ class Scraper
 
 end
 
-Scraper.new.print_courses                     #printed out to your terminal
+Scraper.new.print_courses                     #prints out to your terminal
