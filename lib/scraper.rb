@@ -15,10 +15,10 @@ class Scraper
 
   def make_courses
     self.get_courses.each do |post|
-      course = Course.new
+      course = Course.new                             #new course instance
       course.title = post.css("h2").text
       course.schedule = post.css(".date").text
-      course.description = post.css("p").text
+      course.description = post.css("p").text         #The description of an individual course offering:
     end
   end
 
