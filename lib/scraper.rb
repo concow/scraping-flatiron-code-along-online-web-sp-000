@@ -35,5 +35,4 @@ class Scraper
 
 end
 
-Scraper.new.print_courses
-#we'll hit our binding and be able to play around with the HTML document in the terminal in order to find the CSS selectors
+Scraper.new.print_courses                     #printed out to your terminal
